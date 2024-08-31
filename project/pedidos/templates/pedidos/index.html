@@ -1,0 +1,13 @@
+{% extends 'core/base.html' %}
+
+{% block header %}
+Pedidos
+ {% endblock header %}
+
+{% block main %} 
+<div class="btn-group" role="group" >
+    <a href="{% url 'pedidos:pedido_list' %}" class="btn btn-primary">Listar pedidos</a>
+    <a href="{% url 'pedidos:pedido_create' %}" class="btn btn-primary">Crear pedido</a>
+</div>
+{% endblock main %}
+

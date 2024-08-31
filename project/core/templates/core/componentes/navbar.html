@@ -1,0 +1,41 @@
+ <div class="container-fluid">
+      <a class="navbar-brand" href="#">Optlog <i class="fa fa-home"></i> </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Inicio</a>
+          </li> 
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="{% url 'clientes:index' %}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Clientes
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="{% url 'clientes:cliente_list' %}" >Listado</a></li>
+              <li><a class="dropdown-item" href="{% url 'clientes:cliente_create' %}">Crear</a></li> 
+            </ul>
+          </li> 
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="{% url 'usuarios:index' %}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Usuarios
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="{% url 'usuarios:usuario_list' %}" >Listado</a></li>
+              <li><a class="dropdown-item" href="{% url 'usuarios:usuario_create' %}">Crear</a></li> 
+            </ul>
+          </li> 
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="{% url 'pedidos:index' %}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Pedidos
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="{% url 'pedidos:pedido_list' %}" >Listado</a></li>
+              <li><a class="dropdown-item" href="{% url 'pedidos:pedido_create' %}">Crear</a></li> 
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+ 

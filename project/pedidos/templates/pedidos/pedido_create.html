@@ -1,0 +1,89 @@
+{% extends 'core/base.html' %}
+
+{% block header %}
+Pedidos: Formulario de pedidos
+{% endblock header %}
+
+{% block main %}
+<div class="p-5 shadow">
+  <form method="post">
+    {% csrf_token %}
+    <div class="row g-3">
+      <div class="col-12 col-md-4">
+        <div class="form-group">
+          {{ form.razon_social.label_tag }}
+          {{ form.razon_social }}
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="form-group">
+          {{ form.nombre_destinatario.label_tag }}
+          {{ form.nombre_destinatario }}
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="form-group">
+          {{ form.apellido_destinatario.label_tag }}
+          {{ form.apellido_destinatario }}
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="form-group">
+          {{ form.telefono_destinatario.label_tag }}
+          {{ form.telefono_destinatario }}
+        </div>
+      </div> 
+
+    <div class="col-12 col-md-4">
+        <div class="form-group">
+            {{ form.email_destinatario.label_tag }}
+            {{ form.email_destinatario }}
+        </div>
+    </div>
+    <div class="col-12 col-md-4">
+        <div class="form-group">
+            {{ form.direccion_entrega.label_tag }}
+            {{ form.direccion_entrega }}
+        </div>
+    </div>
+    <div class="col-12 col-md-4">
+        <div class="form-group">
+            {{ form.ciudad_entrega.label_tag }}
+            {{ form.ciudad_entrega }}
+        </div>
+    </div>
+    <div class="col-12 col-md-4">
+      <div class="form-group">
+        {{ form.provincia_entrega.label_tag }}
+        {{ form.provincia_entrega }}
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4">
+        <div class="form-group">
+            {{ form.codigo_postal_entrega.label_tag }}
+            {{ form.codigo_postal_entrega }}
+        </div>
+    </div>
+    <div class="col-12 col-md-4">
+        <div class="form-group">
+            {{ form.estado.label_tag }}
+            {{ form.estado }}
+        </div>
+    </div>
+    <div class="col-12 col-md-4">
+      <div class="form-group">
+        {{ form.creado_por.label_tag }}
+        {{ form.creado_por }}
+      </div>
+    </div>
+</div>
+
+<div class="row mt-3">
+  <div class="col-md-12 text-center">
+    <button class="btn btn-primary" type="submit">Enviar</button>
+  </div>
+</div>
+</form>
+</div>
+{% endblock main %}

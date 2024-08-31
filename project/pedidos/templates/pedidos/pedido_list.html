@@ -1,0 +1,55 @@
+{% extends 'core/base.html' %}
+
+{% block header %}
+Pedidos: Lista de pedidos
+ {% endblock header %}
+
+{% block main %} 
+
+ <form action="{% url 'pedidos:pedido_list' %}" method="get">
+   <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Buscar"  name="q">
+    <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Buscar</button>
+  </div>
+ </form>
+ 
+
+<table class="table table-hover">
+    <thead class="table-light">
+        <tr>
+        <th>Guia</th>
+        <th>Fecha</th>
+        <th>Cliente</th>
+        <th>Destinatario</th> 
+        <th>Telefono</th>
+        <th>Email</th>
+        <th>Dirección</th>
+        <th>Localidad</th>
+        <th>Provincia</th>
+        <th>CP</th>
+        <th>Estado del envio</th> 
+    </tr>
+</thead>
+<tbody>
+    {% for object in object_list %}
+    <tr>
+  <td>{{object.id}}</td>
+  <td>{{object.fecha_creacion | date:"d/m/Y"}}</td>
+  <td>{{object.razon_social | capfirst}}</td>
+  <td>{{object.nombre_destinatario | capfirst}}, {{object.apellido_destinatario | capfirst}} </td> 
+  <td>{{object.telefono_destinatario}}</td>
+  <td>{{object.email_destinatario}}</td>
+  <td>{{object.direccion_entrega}}</td>
+  <td>{{object.ciudad_entrega | capfirst}}</td>
+  <td>{{object.provincia_entrega | capfirst}}</td>
+  <td>{{object.codigo_postal_entrega}}</td>
+  <td>{{object.estado}}</td> 
+</tr>
+{%empty%}
+    <p>No hay registros</p>
+        {% endfor %}
+
+    </tbody>
+</table> 
+
+{% endblock main %}

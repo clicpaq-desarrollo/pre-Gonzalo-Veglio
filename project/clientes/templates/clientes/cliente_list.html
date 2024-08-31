@@ -1,0 +1,41 @@
+{% extends 'core/base.html' %}
+
+{% block header %}
+Cliente: Lista de clientes
+ {% endblock header %}
+
+{% block main %}  
+
+  <table class="table table-hover">
+    <thead class="table-light">
+        <tr>
+        <th>ID</th>
+        <th>Razon Social</th>
+        <th>Email</th>
+        <th>Telefono</th>
+        <th>Direccion</th> 
+        <th>Localidad</th>
+        <th>Provincia</th>
+         
+    </tr>
+</thead>
+<tbody>
+    {% for object in object_list %}
+    <tr>
+  <td>{{object.id}}</td>
+  <td>{{object.razon_social | capfirst}}</td>
+  <td>{{object.email}}</td>
+  <td>{{object.telefono}}</td>
+  <td>{{object.direccion}}</td>
+  <td>{{object.localidad | capfirst}}</td>
+  <td>{{object.provincia | capfirst}}</td>
+   
+</tr>
+{%empty%}
+    <p>No hay registros</p>
+        {% endfor %}
+
+    </tbody>
+</table> 
+    
+{% endblock main %}
