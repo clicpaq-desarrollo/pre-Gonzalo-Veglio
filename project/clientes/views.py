@@ -27,6 +27,17 @@ def cliente_create(request):
     return render(request, 'clientes/cliente_create.html', {'form': form})
  
 
+def cliente_update(request, pk: int):
+    query = Cliente.objects.get(id=pk)
+    if request.method == 'GET':
+        form = ClienteForm(instance=query)
+
+    if request.method == 'POST':
+        form = ClienteForm(request.POST, instance=query)
+        if form.is_valid():
+            form.save()
+            return redirect('clientes:cliente_list')
+    return render(request, 'clientes/cliente_create.html', {'form': form})
  
 def cliente_delete(request, pk: int):
     query = Cliente.objects.get(id=pk)

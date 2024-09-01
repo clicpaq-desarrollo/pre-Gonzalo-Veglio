@@ -29,4 +29,16 @@ def pedido_create(request):
         form.save()
         return redirect ('pedidos:pedido_list')
     return render(request, 'pedidos/pedido_create.html', {'form': form})
+
+def pedido_update(request, pk: int):
+    query = Pedido.objects.get(id=pk)
+    if request.method == 'GET':
+        form = PedidoForm(instance=query)
+
+    if request.method == 'POST':
+        form = PedidoForm(request.POST, instance=query)
+        if form.is_valid():
+            form.save()
+            return redirect('pedidos:pedido_list')
+    return render(request, 'pedidos/pedido_create.html', {'form': form})
  

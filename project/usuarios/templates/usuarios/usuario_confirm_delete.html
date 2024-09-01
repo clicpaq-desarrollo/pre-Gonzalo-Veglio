@@ -5,12 +5,15 @@
 {% endblock header %}
 
 {% block main %}
-    <p>¿Está seguro que desea borrar la categoría de productos "{{ object.username }}"?</p>
+<div class="shadow p-5">
+
+    <p>¿Está seguro que desea borrar el usuario: "{{ object.username }}"?</p>
     <form method="post">
         {% csrf_token %}
-        <button type="submit">Confirmo</button>
-    </form>
-    <button>
-        <a href="{% url 'usuarios:usuario_list' %}">Volver</a>
-    </button>
+        <button class="btn btn-danger" type="submit">Confirmo</button>
+     </form> 
+     <hr>
+         <a class="btn btn-primary mt-5" href="{% url 'usuarios:usuario_list' %}">Volver</a> 
+     
+ </div>
 {% endblock main %}
