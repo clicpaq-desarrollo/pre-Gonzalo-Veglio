@@ -5,7 +5,12 @@ Usuarios: Lista de usuarios
 {% endblock header %} 
 
 {% block main %}
-
+<form action="{% url 'usuarios:usuario_list' %}" method="get">
+    <div class="input-group mb-3">
+     <input type="text" class="form-control" placeholder="Buscar"  name="q">
+     <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Buscar</button>
+   </div>
+  </form>
 
 <table class="table table-hover">
     <thead class="table-light">
@@ -14,6 +19,7 @@ Usuarios: Lista de usuarios
         <th>Nombre y Apellido</th>
         <th>Email</th>
         <th>Usuario</th> 
+        <th>Accion</th> 
     </tr>
 </thead>
 <tbody>
@@ -23,10 +29,15 @@ Usuarios: Lista de usuarios
   <td>{{object.nombre | capfirst}}, {{object.apellido | capfirst}} </td>  
   <td>{{object.email}}</td>
   <td>{{object.username  }}</td> 
+  <td>
+    <div class="btn-group" role="group">
+      <a href="#" class="btn btn-primary"><i class="fa fa-edit"></i> </a> 
+      <a href="{% url 'usuarios:usuario_delete' object.id %}" type="button" class="btn btn-primary" ><i class="fa fa-trash"></i></a>
+    </div>
+  </td>
 </tr>
 {%empty%}
     <p>No hay registros</p>
         {% endfor %}
- 
-
+          
 {% endblock main %}

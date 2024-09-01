@@ -28,6 +28,7 @@ Pedidos: Lista de pedidos
         <th>Provincia</th>
         <th>CP</th>
         <th>Estado del envio</th> 
+        <th>Accion</th> 
     </tr>
 </thead>
 <tbody>
@@ -43,7 +44,12 @@ Pedidos: Lista de pedidos
   <td>{{object.ciudad_entrega | capfirst}}</td>
   <td>{{object.provincia_entrega | capfirst}}</td>
   <td>{{object.codigo_postal_entrega}}</td>
-  <td>{{object.estado}}</td> 
+  <td>{{object.estado}}</td>   
+  <td>
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-primary"><i class="fa fa-edit"></i> </button>  
+    </div>
+  </td>
 </tr>
 {%empty%}
     <p>No hay registros</p>

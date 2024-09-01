@@ -1,0 +1,16 @@
+{% extends 'core/base.html' %}
+
+{% block header %}
+    Usuarios: Borrar usuario
+{% endblock header %}
+
+{% block main %}
+    <p>¿Está seguro que desea borrar la categoría de productos "{{ object.username }}"?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Confirmo</button>
+    </form>
+    <button>
+        <a href="{% url 'usuarios:usuario_list' %}">Volver</a>
+    </button>
+{% endblock main %}

@@ -1,0 +1,19 @@
+{% extends 'core/base.html' %}
+
+{% block header %}
+    Clientes: Borrar cliente
+{% endblock header %}
+
+{% block main %}
+   <div class="shadow p-5">
+
+       <p>¿Está seguro que desea borrar el cliente: "{{ object.username }}"?</p>
+       <form method="post">
+           {% csrf_token %}
+           <button class="btn btn-danger" type="submit">Confirmo</button>
+        </form> 
+        <hr>
+            <a class="btn btn-primary mt-5" href="{% url 'clientes:cliente_list' %}">Volver</a> 
+        
+    </div>
+{% endblock main %}
