@@ -1,20 +1,24 @@
 {% extends 'core/base.html' %}
 
 {% block header %} 
-Usuarios: Lista de usuarios
 {% endblock header %} 
 
 {% block main %}
-<form action="{% url 'usuarios:usuario_list' %}" method="get">
+<section class="container">
+
+  <h1 class="text-center">
+    Lista de usuarios
+  </h1>
+  <form action="{% url 'usuarios:usuario_list' %}" method="get">
     <div class="input-group mb-3">
-     <input type="text" class="form-control" placeholder="Buscar"  name="q">
-     <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Buscar</button>
-   </div>
+      <input type="text" class="form-control" placeholder="Buscar"  name="q">
+      <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Buscar</button>
+    </div>
   </form>
 
 <table class="table table-hover">
     <thead class="table-light">
-        <tr>
+      <tr>
         <th>ID</th>
         <th>Nombre y Apellido</th>
         <th>Email</th>
@@ -40,4 +44,5 @@ Usuarios: Lista de usuarios
     <p>No hay registros</p>
         {% endfor %}
           
+      </section>
 {% endblock main %}

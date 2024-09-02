@@ -1,0 +1,26 @@
+{% extends 'core/base.html' %}
+
+{% block header %}
+{% endblock header %}
+
+{% block main %}
+<section class="container">
+  <h1 class="text-center">
+
+    Detalle del envio
+  </h1>
+  <div class="shadow p-5">
+
+    <div class="row">
+
+      <div class="mt-3 col-12 col-md-4"><span class="fw-bold"><h4> Numero guia:</h4></span> <h5 class="fw-normal">  {{object.id}}</h5> </div>
+      <div class="mt-3 col-12 col-md-6"><span class="fw-bold"><h4>Cliente:</h4></span><h5 class="fw-normal"> {{object.razon_social}}</h5></div>
+      <div class="mt-3 col-12 col-md-2 text-end"> <span class="badge text-bg-success p-2"><h4>{{object.estado}} </h4></span> </h5></div>
+      <div class="mt-3 col-12 col-md-4"><span class="fw-bold"><h4>Nombre: </h4></span><h5 class="fw-normal"> {{object.nombre_destinatario | capfirst}} {{object.apellido_destinatario | capfirst}}</h5></div>
+      <div class="mt-3 col-12 col-md-4"><span class="fw-bold"><h4>Telefono: </h4></span><h5 class="fw-normal"> {{object.telefono_destinatario}}</h5></div>
+      <div class="mt-3 col-12 col-md-4"><span class="fw-bold"><h4>Email: </h4></span><h5 class="fw-normal"> {{object.email_destinatario}}</h5></div>
+      <div class="mt-3 col-12"><span class="fw-bold"><h4>Direccion entrega: </h4></span><h5 class="fw-normal">{{object.direccion_entrega  | capfirst}}, ({{object.codigo_postal_entrega}}).{{object.ciudad_entrega | capfirst}}, {{object.provincia_entrega | capfirst}}</h5></div>
+    </div>
+  </div>
+</section>
+{% endblock main %}

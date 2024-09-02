@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from .models import Pedido
 from .forms import PedidoForm
 from django.db.models import Q
-
+from django.contrib import messages 
 
 def index(request):
     return render(request, 'pedidos/index.html')
@@ -41,4 +41,25 @@ def pedido_update(request, pk: int):
             form.save()
             return redirect('pedidos:pedido_list')
     return render(request, 'pedidos/pedido_create.html', {'form': form})
+
  
+def pedido_detail(request, pk: int):
+    try:
+        query = Pedido.objects.get(pk=pk)   
+    except Pedido.DoesNotExist:
+        messages.error(request, "No se encontró ningún pedido con ese número.")
+        return redirect('pedidos:pedido_list')
+    context = {'object': query}
+    return render(request, 'pedidos/pedido_detail.html', context)
+       
+       
+def buscar_pedido(request):
+    if request.method == 'POST':
+        numero_guia = request.POST.get('numero_guia')
+        pedido = Pedido.objects.filter(id=numero_guia).first()
+        if pedido:
+            return redirect('pedidos:pedido_detail', pk=pedido.pk)   
+        else:
+            messages.error(request, "No se encontró ningún pedido con ese número.")
+            return redirect('pedidos:pedido_list')
+    return redirect('pedidos:pedido_list')

@@ -1,10 +1,13 @@
 {% extends 'core/base.html' %}
 
 {% block header %}
-    Usuarios: Borrar usuario
 {% endblock header %}
 
 {% block main %}
+<section class="container">
+    <h1 class="text-center">
+         Borrar usuario
+</h1>
 <div class="shadow p-5">
 
     <p>¿Está seguro que desea borrar el usuario: <span class="fw-bold">"{{ object.username }}"</span>?</p>
@@ -16,4 +19,5 @@
          <a class="btn btn-primary mt-5" href="{% url 'usuarios:usuario_list' %}">Volver</a> 
      
  </div>
+ </section> 
 {% endblock main %}

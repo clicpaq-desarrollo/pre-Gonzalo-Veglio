@@ -12,6 +12,7 @@ OptLog es una aplicación desarrollada en Django que proporciona una solución p
 - **Geolocalización**: Información sobre la ubicación.
 - **Pedidos**: Gestión de pedidos y su estado.
 - **Usuarios**: Administración de usuarios y permisos.
+- **Buscar envio**: Permite al usuario realizar una busqueda de un envio en particular 
 
 Cada aplicación ofrece funciones CRUD (Crear, Leer, Actualizar, Eliminar) para su respectivo dominio.
 

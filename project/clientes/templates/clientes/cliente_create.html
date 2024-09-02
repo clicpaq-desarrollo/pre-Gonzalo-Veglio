@@ -1,16 +1,21 @@
 {% extends 'core/base.html' %}
 
 {% block header %}
-Clientes: Formulario de alta de clientes
- {% endblock header %}
+{% endblock header %}
 
 {% block main %} 
-<div class="p-5 shadow">
+<section class="container">
 
+    <h1 class="text-center">
+        Formulario de alta de clientes
+    </h1>
+    <div class="p-5 shadow">
+        
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
         <button class="btn btn-primary" type="submit">Enviar</button>
     </form>
 </div>
+</section>
 {% endblock main %}

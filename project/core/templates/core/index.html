@@ -1,13 +1,45 @@
 {% extends 'core/base.html' %}
 
 {% block header %}
-    OptLog - Optimización de Logística
-{% endblock header %}
-
+ {% endblock header %}
+ 
 {% block main %}
-    <img src="https://cdn.pixabay.com/photo/2024/03/26/11/57/truck-8656658_1280.jpg"
-         alt="imagen"
-         width="100%"
-         height="auto"
-         style="display: block; margin: auto;"/>
+<div id="carouselExampleCaptions" class="carousel slide carousel-fade"   data-bs-ride="true"> 
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div style="height: 80vh;" class="carousel-item active">
+        <img style="filter: brightness(0.5) blur(1px);"  src="https://cdn.pixabay.com/photo/2019/08/15/17/56/production-4408573_1280.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h2>Eficiencia en cada paso</h2>
+          <p>Optimiza tus operaciones con soluciones logísticas integrales.</p>
+        </div>
+      </div>
+      <div style="height: 80vh;" class="carousel-item">
+        <img style="filter: brightness(0.5) blur(1px);"  src="https://cdn.pixabay.com/photo/2024/03/26/11/57/truck-8656658_1280.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h2>Entregas a tiempo, siempre</h2>
+          <p>Nuestro compromiso es asegurar la puntualidad y precisión en cada envío.</p>
+        </div>
+      </div>
+      <div style="height: 80vh;" class="carousel-item">
+        <img style="filter: brightness(0.5) blur(1px);"  src="https://cdn.pixabay.com/photo/2014/08/02/11/40/high-bay-408222_1280.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h2>Logística sin fronteras</h2>
+          <p>Conectamos tu negocio globalmente con servicios rápidos y confiables.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 {% endblock main %}

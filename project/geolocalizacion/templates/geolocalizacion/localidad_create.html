@@ -1,10 +1,14 @@
 {% extends 'core/base.html' %}
 
 {% block header %}
-Localidades: Formulario de alta de localidades
- {% endblock header %}
+{% endblock header %}
 
 {% block main %} 
+<section class="container">
+    <h1 class="text-center">
+        Formulario de alta de localidades
+    </h1>
+
 <div class="p-5 shadow">
 
     <form method="post">
@@ -13,4 +17,5 @@ Localidades: Formulario de alta de localidades
         <button class="btn btn-primary" type="submit">Enviar</button>
     </form>
 </div>
+</section>
 {% endblock main %}
