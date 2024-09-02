@@ -21,7 +21,7 @@ def usuario_list(request):
     context = {"object_list": usuarios}
     return render(request, "usuarios/usuario_list.html", context)
  
-
+ 
 def usuario_create(request):
     if request.method == 'POST':
         form = UsuarioForm(request.POST)

@@ -18,4 +18,4 @@ class PedidoForm(forms.ModelForm):
             'codigo_postal_entrega': forms.TextInput(attrs={'class': 'form-control mt-2'}), 
             'estado': forms.TextInput(attrs={'class': 'form-control mt-2'}), 
             'creado_por': forms.Select(attrs={'class': 'form-select mt-2'}), 
-         }
+         } 

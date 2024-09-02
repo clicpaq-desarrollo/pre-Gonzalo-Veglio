@@ -1,11 +1,6 @@
- <style>
-   .nav-item:hover {
-     background: #ddd;
-     border-radius: 5px;
-   }
- </style>
+
  <div class="container">
-   <a class="navbar-brand" href="{% url 'index' %}">Optlog <i class="fa fa-home"></i> </a>
+   <a class="navbar-brand" href="{% url 'index' %}">Optlog <i class="fa fa-truck-fast"></i> </a>
    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
      <span class="navbar-toggler-icon"></span>
    </button>
@@ -43,7 +38,7 @@
        </li>
        <li class="nav-item dropdown">
          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-           Ubicacion geografica
+           Ubicación geográfica
          </a>
          <ul class="dropdown-menu">
            <li><a class="dropdown-item" href="{% url 'geolocalizacion:provincia_list' %}">Provincias listado </a></li>
@@ -55,8 +50,8 @@
      </ul>
      <form class="d-flex" role="search" method="post" action="{% url 'pedidos:buscar_pedido' %}">
        {% csrf_token %}
-       <input class="form-control me-2" type="number" placeholder="Numero de envio" aria-label="Search" name="numero_guia">
-       <button class="btn btn-outline-success btn-sm" type="submit">Buscar</button>
+       <input class="form-control me-2" type="number" placeholder="Numero de envio" required aria-label="Search" name="numero_guia">
+       <button class="btn btn-outline-success btn-sm" type="submit" >Buscar</button>
      </form>
-   </div>
+   </div> 
  </div>

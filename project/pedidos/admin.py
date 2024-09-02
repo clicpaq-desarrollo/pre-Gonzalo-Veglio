@@ -12,4 +12,4 @@ class PedidoAdmin(admin.ModelAdmin):
     ordering = ("-fecha_creacion", "id")
     date_hierarchy = "fecha_creacion"
     
-   
+    

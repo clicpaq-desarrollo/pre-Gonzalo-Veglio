@@ -8,7 +8,7 @@ class PedidoAdmin(admin.ModelAdmin):
     list_display = ("razon_social","email","localidad", "email","provincia")
     list_filter = ("razon_social", ) 
     search_fields = ("Cliente__razon_social",) 
-    ordering = ("-id",) 
+    ordering = ("-id",)  
     
     
  

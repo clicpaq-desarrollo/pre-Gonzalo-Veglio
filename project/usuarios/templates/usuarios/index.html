@@ -1,13 +1,20 @@
 {% extends 'core/base.html' %}
 
 {% block header %}
-Usuarios
- {% endblock header %}
+{% endblock header %}
 
-{% block main %} 
-<div class="btn-group" role="group" >
-    <a href="{% url 'usuarios:usuario_list' %}" class="btn btn-primary">Listar usuarios</a>
-    <a href="{% url 'usuarios:usuario_create' %}" class="btn btn-primary">Crear usuario</a>
-</div>
+{% block main %}
+<section class="container d-flex flex-column justify-content-center align-items-center vh-70">
 
+    <h1 class="text-center">
+      Usuarios
+    </h1>
+    
+    <div class="btn-group" role="group">
+      <a href="{% url 'usuarios:usuario_list' %}" class="btn btn-lg btn-primary">Listar usuarios</a>
+      <a href="{% url 'usuarios:usuario_create' %}" class="btn btn-lg btn-primary">Crear usuario</a>
+    </div>
+    
+  </section>
+  
 {% endblock main %}

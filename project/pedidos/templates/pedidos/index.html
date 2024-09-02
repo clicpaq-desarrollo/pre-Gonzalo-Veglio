@@ -1,13 +1,18 @@
 {% extends 'core/base.html' %}
 
 {% block header %}
-Pedidos
- {% endblock header %}
+{% endblock header %}
 
 {% block main %} 
+<section class="container d-flex flex-column justify-content-center align-items-center vh-70">
+    
+    <h1 class="text-center">
+        Pedidos
+        
+    </h1>
 <div class="btn-group" role="group" >
-    <a href="{% url 'pedidos:pedido_list' %}" class="btn btn-primary">Listar pedidos</a>
-    <a href="{% url 'pedidos:pedido_create' %}" class="btn btn-primary">Crear pedido</a>
+    <a href="{% url 'pedidos:pedido_list' %}" class="btn btn-primary btn-lg">Listar pedidos</a>
+    <a href="{% url 'pedidos:pedido_create' %}" class="btn btn-primary btn-lg">Crear pedido</a>
 </div>
 {% endblock main %}
 

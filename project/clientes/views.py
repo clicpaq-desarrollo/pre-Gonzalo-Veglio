@@ -9,7 +9,7 @@ def index(request):
 def cliente_list(request):
     query = request.GET.get('q')
     if query:
-        clientes = Cliente.objects.filter( email__icontains=query )
+        clientes = Cliente.objects.filter( razon_social__icontains=query )
     else:
         clientes = Cliente.objects.all()
     context = {"object_list": clientes}

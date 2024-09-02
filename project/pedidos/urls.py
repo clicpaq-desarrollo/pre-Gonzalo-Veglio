@@ -13,3 +13,4 @@ urlpatterns = [
     path('pedido/detail/<int:pk>', views.pedido_detail, name='pedido_detail'),
     path('buscar/', views.buscar_pedido, name='buscar_pedido'),  
 ]
+ 
