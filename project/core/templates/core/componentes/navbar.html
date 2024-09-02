@@ -41,6 +41,17 @@
               <li><a class="dropdown-item" href="{% url 'pedidos:pedido_create' %}">Crear</a></li> 
             </ul>
           </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Ubicacion geografica
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="{% url 'geolocalizacion:provincia_list' %}" >Provincias listado </a></li>
+              <li><a class="dropdown-item" href="{% url 'geolocalizacion:provincia_create' %}">Provincias Crear</a></li> 
+              <li><a class="dropdown-item" href="{% url 'geolocalizacion:localidad_list' %}" >Localidad Listado</a></li>
+              <li><a class="dropdown-item" href="{% url 'geolocalizacion:localidad_create' %}">Localidad Crear</a></li> 
+            </ul>
+          </li>
         </ul>
       </div>
     </div>

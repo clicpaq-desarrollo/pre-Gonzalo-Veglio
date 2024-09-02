@@ -1,0 +1,16 @@
+{% extends 'core/base.html' %}
+
+{% block header %}
+provincia: Formulario de alta de provincia
+ {% endblock header %}
+
+{% block main %} 
+<div class="p-5 shadow">
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-primary" type="submit">Enviar</button>
+    </form>
+</div>
+{% endblock main %}

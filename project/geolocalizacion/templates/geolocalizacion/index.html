@@ -1,0 +1,12 @@
+{% extends 'core/base.html' %}
+
+{% block header %}
+Clientes 
+ {% endblock header %}
+
+{% block main %} 
+<div class="btn-group" role="group" >
+    <a href="{% url 'clientes:cliente_list' %}" class="btn btn-primary">Listar clientes</a>
+    <a href="{% url 'clientes:cliente_create' %}" class="btn btn-primary">Crear usuario</a>
+</div>
+{% endblock main %}

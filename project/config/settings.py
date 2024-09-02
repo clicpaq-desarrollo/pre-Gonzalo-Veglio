@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'pedidos',
     'usuarios',
     'clientes',
+    'geolocalizacion',
 ]
 
 MIDDLEWARE = [

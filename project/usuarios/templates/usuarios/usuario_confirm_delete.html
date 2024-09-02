@@ -7,7 +7,7 @@
 {% block main %}
 <div class="shadow p-5">
 
-    <p>¿Está seguro que desea borrar el usuario: "{{ object.username }}"?</p>
+    <p>¿Está seguro que desea borrar el usuario: <span class="fw-bold">"{{ object.username }}"</span>?</p>
     <form method="post">
         {% csrf_token %}
         <button class="btn btn-danger" type="submit">Confirmo</button>

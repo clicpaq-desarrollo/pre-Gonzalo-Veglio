@@ -1,19 +1,19 @@
 {% extends 'core/base.html' %}
 
 {% block header %}
-    Clientes: Borrar cliente
+    localidads: Borrar localidad
 {% endblock header %}
 
 {% block main %}
    <div class="shadow p-5">
 
-       <p>¿Está seguro que desea borrar el cliente: <span class="fw-bold">"{{ object.razon_social }}"</span>?</p>
+       <p>¿Está seguro que desea borrar el localidad: <span class="fw-bold">"{{ object.nombre }}"</span>?</p>
        <form method="post">
            {% csrf_token %}
            <button class="btn btn-danger" type="submit">Confirmo</button>
         </form> 
         <hr>
-            <a class="btn btn-primary mt-5" href="{% url 'clientes:cliente_list' %}">Volver</a> 
+            <a class="btn btn-primary mt-5" href="{% url 'geolocalizacion:localidad_list' %}">Volver</a> 
         
     </div>
 {% endblock main %}

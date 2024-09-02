@@ -12,5 +12,7 @@ class UsuarioForm(forms.ModelForm):
             'fecha_creacion': forms.TextInput(attrs={'class': 'form-control'}), 
             'nombre': forms.TextInput(attrs={'class': 'form-control'}), 
             'apellido': forms.TextInput(attrs={'class': 'form-control'}), 
+            'provincia': forms.Select(attrs={'class': 'form-select'}),
+            'localidad': forms.Select(attrs={'class': 'form-select'}),
         }
         

@@ -11,7 +11,7 @@ class ClienteForm(forms.ModelForm):
             'email': forms.EmailInput(attrs={'class': 'form-control'}), 
             'telefono': forms.TextInput(attrs={'class': 'form-control'}), 
             'direccion': forms.TextInput(attrs={'class': 'form-control'}), 
-            'localidad': forms.TextInput(attrs={'class': 'form-control'}), 
-            'provincia': forms.TextInput(attrs={'class': 'form-control'}), 
+            'provincia': forms.Select(attrs={'class': 'form-select'}), 
+            'localidad': forms.Select(attrs={'class': 'form-select'}), 
         }
         
