@@ -1,35 +1,37 @@
 # pre-Gonzalo-Veglio
 
-# Sistema de Gestión de Envíos
+# OptLog
 
-Este proyecto es un sistema de gestión de envíos desarrollado para una empresa de logística que se encarga de recepcionar, almacenar y despachar mercadería de otros clientes a destinatarios finales.
+OptLog es un sistema de Optimización Logística que facilita la gestión de envíos dentro de una red logística. El sistema permite manejar datos de clientes y realizar un seguimiento de los envíos realizados a distintos destinatarios.
 
-## Tabla de Contenidos
+## Descripción
 
-- [Descripción del Proyecto](#descripción-del-proyecto)
-- [Características Principales](#características-principales)
-- [Requisitos del Sistema](#requisitos-del-sistema)
-- [Instalación](#instalación)
-- [Configuración Inicial](#configuración-inicial)
-- [Uso](#uso)
-- [Credenciales de Acceso](#credenciales-de-acceso)
-- [Estructura del Proyecto](#estructura-del-proyecto)
-- [Contribuciones](#contribuciones)
-- [Licencia](#licencia)
+OptLog es una aplicación desarrollada en Django que proporciona una solución para gestionar la logística de envíos. Incluye varias aplicaciones Django que cubren diferentes aspectos del sistema:
 
-## Descripción del Proyecto
+- **Clientes**: Manejo de datos de los clientes.
+- **Geolocalización**: Información sobre la ubicación.
+- **Pedidos**: Gestión de pedidos y su estado.
+- **Usuarios**: Administración de usuarios y permisos.
 
-Este sistema permite gestionar los envíos de mercadería de manera eficiente, proporcionando una plataforma para que los administradores y clientes registren envíos, almacenen datos de destinatarios, gestionen inventarios y coordinen la logística de despachos.
+Cada aplicación ofrece funciones CRUD (Crear, Leer, Actualizar, Eliminar) para su respectivo dominio.
 
-## Características Principales
+## Funcionalidades en Desarrollo
 
-- Registro y gestión de clientes.
-- Gestión de usuarios y roles.
-- Creación y seguimiento de pedidos de envíos.
-- Almacenamiento de datos de destinatarios finales.
-- Administración de direcciones y detalles de entrega.
-- Control de inventarios y mercadería.
+Actualmente, el proyecto está en proceso de desarrollo y se están trabajando en las siguientes mejoras:
+
+- **Desplegables para Provincias y Localidades**:
+  - En los formularios de creación para clientes y pedidos, se añadirá un campo desplegable que permitirá seleccionar la **provincia** y la **localidad** correspondientes. Esto facilitará la selección de ubicaciones de manera más eficiente.
+
+- **Sistema de Autenticación y Autorización**:
+  - Se implementará un sistema de **login** que incluirá **permisos y roles**. Esta funcionalidad permitirá gestionar el acceso a diferentes partes de la aplicación de acuerdo con el rol del usuario, mejorando la seguridad y la administración de la aplicación.
+
+- **Dependencia Dinámica de Localidades**:
+  - Los formularios de creación para clientes y pedidos serán mejorados para permitir la selección de una **provincia** primero. Una vez seleccionada la provincia, se mostrarán únicamente las localidades correspondientes a esa provincia, simplificando el proceso de selección.
+
+Estas características están en desarrollo y se implementarán en versiones futuras para mejorar la funcionalidad y la experiencia del usuario.
+
+**CORRECCIONES ANTES DE LA ENTREGA** 
 
 ## Panel administrador
 -usuario: admin
--Contraseña: 1234567
+-Contraseña: 1234
